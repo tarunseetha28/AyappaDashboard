@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "npm-run-all --parallel spa api-server",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jest-environment-jsdom-sixteen",
@@ -23,6 +25,7 @@
     "cors": "^2.8.5",
     "express": "^4.16.4",
     "express-jwt": "^6.0.0",
+    "gh-pages": "^3.2.3",
     "helmet": "^3.18.0",
     "highlight.js": "^10.0.3",
     "jwks-rsa": "^1.4.0",
